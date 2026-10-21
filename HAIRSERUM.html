@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Scalp & Hair Serum — Unlock Your Hair's Ultimate Health</title>
+    <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-Serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --sage: #7B8F7D;
+            --sage-dark: #5A6D5C;
+            --warm-beige: #F4EFEB;
+            --off-white: #FAF9F6;
+            --charcoal: #2C302E;
+            --gold: #D4AF37;
+            --border-color: #E2DDD5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--off-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(250, 249, 246, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--sage-dark);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--sage);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-shop-nav {
+            background-color: var(--sage);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-shop-nav:hover {
+            background-color: var(--sage-dark);
+        }
+
+        .cart-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--sage-dark);
+            color: white;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 80px 5%;
+            background-color: var(--warm-beige);
+            min-height: 85vh;
+            gap: 50px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--charcoal);
+            border: 1px solid var(--charcoal);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--charcoal);
+            color: white;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        /* --- TRUST BADGES --- */
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 5%;
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--sage-dark);
+        }
+
+        .badge-item i {
+            font-size: 1.5rem;
+            color: var(--sage);
+        }
+
+        /* --- FEATURED PRODUCT --- */
+        .section-container {
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            color: var(--sage);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .product-card-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            text-align: left;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .product-gallery img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        .product-info .rating {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .product-info h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage-dark);
+            margin-bottom: 20px;
+        }
+
+        .product-desc {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* --- SCIENCE / INGREDIENTS --- */
+        .ingredients-section {
+            background-color: var(--warm-beige);
+            padding: 100px 5%;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .ingredient-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .ingredient-card i {
+            font-size: 2rem;
+            color: var(--sage);
+            margin-bottom: 20px;
+        }
+
+        .ingredient-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .ingredient-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-card .stars {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-info {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 80px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .newsletter-form input {
+            padding: 12px 15px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            flex: 1;
+            font-family: inherit;
+        }
+
+        .newsletter-form button {
+            background-color: var(--sage);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--sage-dark);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero, .product-card-wrapper, .ingredients-grid, .testimonials-grid, .footer-grid, .trust-badges {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">LUMIÈRE</div>
+        <nav>
+            <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#science">Our Science</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#shop" class="btn-shop-nav">Shop Now</a>
+            <div class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="cart-badge">1</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlock Your Hair's Ultimate Health, Naturally.</h1>
+            <p>Serum rambut inovatif dengan formula klinis yang menutrisi folikel, mengatasi kerontokan, dan mengembalikan kilau alami rambut Anda.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn-primary">Shop the Serum</a>
+                <a href="#science" class="btn-secondary">Learn Our Formula</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Contoh Placeholder Gambar Botol Serum Estetik -->
+            <img src="https://images.unsplash.com/photo-1608248597359-f538568fb113?auto=format&fit=crop&q=80&w=800" alt="Lumiere Hair Serum">
+        </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <div class="trust-badges">
+        <div class="badge-item"><i class="fa-solid fa-leaf"></i> 100% Cruelty-Free</div>
+        <div class="badge-item"><i class="fa-solid fa-shield-halved"></i> Dermatologically Tested</div>
+        <div class="badge-item"><i class="fa-solid fa-droplet-slash"></i> Paraben-Free Formula</div>
+        <div class="badge-item"><i class="fa-solid fa-chart-line"></i> Hasil Terbukti dalam 4 Minggu</div>
+    </div>
+
+    <!-- FEATURED PRODUCT -->
+    <section id="shop" class="section-container">
+        <div class="section-subtitle">The Hero Product</div>
+        <h2 class="section-title">Perawatan Inténsif Kulit Kepala Anda</h2>
+        
+        <div class="product-card-wrapper">
+            <div class="product-gallery">
+                <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=800" alt="Revitalizing Scalp & Hair Serum">
+            </div>
+            <div class="product-info">
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span style="color: #666; font-size: 0.85rem; margin-left: 8px;">(482 Ulasan)</span>
+                </div>
+                <h3>Revitalizing Scalp & Hair Serum</h3>
+                <div class="product-price">Rp 389.000 <span style="font-size: 0.9rem; color: #888; font-weight: normal;">/ 50ml</span></div>
+                <p class="product-desc">Dirancang khusus dengan kombinasi sains modern dan botani murni untuk memperkuat akar rambut, merangsang pertumbuhan rambut baru, dan menenangkan kulit kepala yang kering.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" class="btn-primary" onclick="alert('Produk berhasil dimasukkan ke keranjang!'); return false;">Add to Cart</a>
+                    <a href="#" class="btn-secondary">Quick View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCIENCE & INGREDIENTS -->
+    <section id="ingredients" class="ingredients-section">
+        <div style="text-align: center;">
+            <div class="section-subtitle">The Science</div>
+            <h2 class="section-title">Bahan Alami Pilihan Berbasis Sains</h2>
+            <p style="color: #666; max-width: 600px; margin: 0 auto;">Kami hanya menggunakan bahan aktif berkualitas tinggi yang telah teruji secara klinis aman dan efektif untuk semua jenis kulit kepala.</p>
+        </div>
+
+        <div class="ingredients-grid">
+            <div class="ingredient-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h4>Redensyl®</h4>
+                <p>Bahan aktif revolusioner untuk memicu regenerasi sel punca folikel rambut, mempercepat pertumbuhan rambut secara signifikan.</p>
+            </div>
+            <div class="ingredient-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h4>Biotin (Vitamin B7)</h4>
+                <p>Menutrisi helai rambut dari dalam guna meningkatkan ketebalan serat rambut dan mencegah kerapuhan dini.</p>
+            </div>
+            <div class="ingredient-card">
+                <i class="fa-solid fa-water"></i>
+                <h4>Organic Argan Oil</h4>
+                <p>Melembapkan kulit kepala secara mendalam, mengunci hidrasi, serta mengembalikan kilau alami rambut tanpa rasa lengket.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="reviews" class="section-container">
+        <div class="section-subtitle">Social Proof</div>
+        <h2 class="section-title">Kata Mereka yang Telah Membuktikannya</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Rambut rontok berkurang drastis setelah pemakaian minggu ketiga. Kulit kepala juga terasa jauh lebih sehat dan tidak gatal lagi!"</p>
+                <div class="reviewer-info">— Sarah A., Jakarta</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Teksturnya sangat ringan, cepat meresap, dan tidak bikin lepek sama sekali. Wanginya pun sangat mewah dan menenangkan."</p>
+                <div class="reviewer-info">— Dimas P., Surabaya</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Anak rambut mulai tumbuh di area dahi yang tadinya tipis. Worth it banget dan jadi skincare routine wajib untuk rambutku."</p>
+                <div class="reviewer-info">— Maharani K., Bandung</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>LUMIÈRE</h4>
+                <p style="color: #bbb; font-size: 0.9rem; max-width: 300px; margin-bottom: 20px;">Menghadirkan standar baru perawatan rambut mewah berbasis sains dan kebaikan alam untuk kecantikan sejati Anda.</p>
+                <div style="display: flex; gap: 15px; font-size: 1.2rem;">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#shop">Shop All</a></li>
+                    <li><a href="#science">Our Science</a></li>
+                    <li><a href="#ingredients">Ingredients</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">Kebijakan Pengiriman</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Layanan Pelanggan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dapatkan Diskon 15%</h4>
+                <p style="color: #bbb; font-size: 0.9rem;">Berlangganan buletin kami untuk mendapatkan diskon pembelian pertama Anda.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih
